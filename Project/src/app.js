@@ -1,10 +1,13 @@
 const db = require('./app/repository/usuarioRepository.js')
 const router = require('./router.js');
 const express = require("express");
+const cors = require('cors');
 
 const app = express();
 
 app.use(express.json());
+
+app.use(cors())
 
 app.use(router);
 
