@@ -10,10 +10,6 @@ async function connect(){
 
     const client = await pool.connect();
     console.log("Criou o pool de conexão");
-
-    const res = await client.query("Select * from usuario");
-    console.log(res.rows[0]);
-    client.release()
     
     global.connection = pool;
     return pool.connect();
