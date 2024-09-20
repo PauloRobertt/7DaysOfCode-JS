@@ -58,8 +58,9 @@ form{
 }
 
 table{
-    background-color: red;
     width: 90%;
+    text-align: center;
+    border: 1px solid;
 }
 
 input:invalid {
