@@ -1,6 +1,6 @@
-require('dotenv').config();
+import 'dotenv/config';
+import app from './app.js';
 
-const app = require('./app.js');
 const port = process.env.PORT;
 
 app.listen(port, () =>{
