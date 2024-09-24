@@ -1,7 +1,6 @@
-const db = require('./app/repository/usuarioRepository.js')
-const router = require('./router.js');
-const express = require("express");
-const cors = require('cors');
+import router from './router.js';
+import express from 'express';
+import cors from 'cors';
 
 const app = express();
 
@@ -11,5 +10,5 @@ app.use(cors())
 
 app.use(router);
 
-module.exports = app;
+export default app;
  
