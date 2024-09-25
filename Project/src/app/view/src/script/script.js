@@ -12,7 +12,17 @@ function getAllUsers(){
             const tdAcoes = document.createElement('td');
     
             tdNome.innerText = users.nome;
-            tdDataDeNascimento.innerText = users.datadenascimento;
+
+            const date = new Date(users.datadenascimento);
+
+            const dia = String(date.getDate()).padStart(2, '0');
+            const mes = String(date.getMonth() + 1).padStart(2, '0');
+            const ano = date.getFullYear();
+
+            const FormatDate = `${dia}/${mes}/${ano}`;
+
+            tdDataDeNascimento.innerText = FormatDate;
+
             tdAcoes.innerHTML = 
             `
             <button type="button" class="btnA" onClick="updateUsers(${users.id})">
