@@ -71,9 +71,19 @@ function DeleteUsers(id){
 
     .then(res => {
         if(res.ok){
-            console.log('Sucesso na exclusão');
-            alert("Sucesso na exclusão");
-            location.reload(); 
+            Toastify({
+                text: 'Sucesso ao deletar o usuario!',
+                position: 'center',
+                gravity: "bottom",
+                duration: 2000,
+                style: {
+                    background: "#ff0000",
+                    color: 'white'
+                }
+            }).showToast();
+            setTimeout(() => {
+                location.reload()
+            }, 2000)
         }else{
             console.log('Erro na Exclusão');
         }
@@ -100,9 +110,15 @@ function updateUsers(id){
 
     .then(res => {
         if(res.ok){
-            console.log('Sucesso na atualização');
-            alert("Sucesso na atualização");
-            location.reload(); 
+            Toastify({
+                text: 'Sucesso ao atualizar o usuario!',
+                position: 'center',
+                gravity: "bottom",
+                duration: 2000,
+            }).showToast();
+            setTimeout(() => {
+                location.reload()
+            }, 2000) 
         }else{
             console.log('Erro na atualização');
         }
