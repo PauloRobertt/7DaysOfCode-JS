@@ -2,6 +2,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 header{
@@ -29,22 +30,26 @@ form{
     margin: 20px;
 }
 
-.input{
+.containerDados{
     display: flex;
     flex-direction: column;
     width: 65vw;
     gap: 5px;
 }
 
-.input input{
+.containerDados input{
     padding: 10px;
     border-radius: 5px;
     background-color: rgba(208, 208, 212, 0.795);
     border: none;
 }
 
-.input span{
+.containerDados .span-label{
     color: gray;
+}
+
+.span-info{
+    color: red;
 }
 
 .btn{
@@ -59,10 +64,29 @@ form{
 
 table{
     width: 90%;
-    text-align: center;
-    border: 1px solid;
+    text-align: left;
+    border-collapse: collapse;
 }
 
-input:invalid {
-    border: red solid 3px;
-  }     
+table th:nth-of-type(1){
+    width: 40%;
+}
+
+table th, table td{
+    border: 1px solid;
+    padding: 20px;
+}
+
+.btnD{
+    border: none;
+    cursor: pointer;
+    color: red;
+    background-color: white;
+}
+
+.btnA{
+    border: none;
+    cursor: pointer;
+    background-color: white;
+    color: rgb(150, 150, 87);
+}

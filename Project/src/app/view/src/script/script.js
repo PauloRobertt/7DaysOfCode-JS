@@ -15,11 +15,12 @@ function getAllUsers(){
             tdDataDeNascimento.innerText = users.datadenascimento;
             tdAcoes.innerHTML = 
             `
-            <button type="button" class="btnOp" onClick="DeleteUsers(${users.id})">
-                eletar
+            <button type="button" class="btnA" onClick="updateUsers(${users.id})">
+                Editar
             </button>
-            <button type="button" class="btnOp" onClick="updateUsers(${users.id})">
-                Atualizar
+
+            <button type="button" class="btnD" onClick="DeleteUsers(${users.id})">
+                Deletar
             </button>
             `;
     
@@ -72,7 +73,7 @@ function DeleteUsers(id){
     .then(res => {
         if(res.ok){
             Toastify({
-                text: 'Sucesso ao deletar o usuario!',
+                text: 'Usuario Deletado!',
                 position: 'center',
                 gravity: "bottom",
                 duration: 2000,
@@ -111,7 +112,7 @@ function updateUsers(id){
     .then(res => {
         if(res.ok){
             Toastify({
-                text: 'Sucesso ao atualizar o usuario!',
+                text: 'Usuario Atualizado!',
                 position: 'center',
                 gravity: "bottom",
                 duration: 2000,
